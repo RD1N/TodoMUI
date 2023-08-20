@@ -77,8 +77,8 @@ export default function ListTasks () {
         );
     }
 
-    function handleDeleteTask(taskId) {
-        setTasks(tasks.filter((t) => t.id !== taskId));
+    const handleDeleteTask = (id) => {
+        setTasks(tasks.filter((t) => t.id != id));
     }
 
     return (
@@ -109,7 +109,7 @@ export default function ListTasks () {
                                     onClick={handleDeleteTask}
                                     color="secondary"
                                 >
-                                    <DeleteIcon onClick={handleDeleteTask}/>
+                                    <DeleteIcon/>
                                 </IconButton>
                             </ListItemButton>
                         </ListItem>
